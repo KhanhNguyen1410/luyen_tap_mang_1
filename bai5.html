@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let nameStar = ["Polaris", "Aldebaran", "Deneb", "Vega"," Altair", "Dubhe" ,"Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila"," Ursa Major","Leo"]
+    function check(string){
+        let result = '';
+        for (let i = 0; i < nameStar.length; i++) {
+            if (string === nameStar[i]){
+                result = "the corresponding contellation is: "+ constellation[i];
+                break;
+            }
+            else if (string === constellation[i]){
+                result = "the corresponding star name is: "+ nameStar[i];
+                break;
+            }
+            else {
+                result = "ngôi sao đó nằm ngoài tầm hiểu biết của tôi";
+            }
+        } return result;
+    }
+    let star = check(prompt("enter the star"));
+    document.write(star);
+</script>
+</body>
+</html>
